@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background-color: #2d2e37; */
+  background-color: #1e1e2a;
+  /* overflow-y: hidden;
+    overflow: scroll; */
+  min-height: 100vh;
+  /* overflow: scroll; */
+  /* overflow: hidden; */
+  /* overflow: scroll; */
+}
+body {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 300px; /* Adjust the width as needed */
+}
+
+.search-icon {
+  padding: 8px;
+}
+
+.search-input {
+  /* flex: 1; */
+  border: none;
+  padding: 8px;
+  outline: none;
+  background: transparent;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  /* display: no ne; */
+  z-index: 1;
+  /* opacity: 0.8; */
+  /* filter: blur(10px); */
+}
+
+.loading-Position {
+  @apply flex items-center justify-center mx-auto ml-[130px] md:ml-[600px];
+}
+.loader-container {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  border: 8px solid #3498db;
+  border-top: 8px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-dots {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 15px;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.dot1,
+.dot2,
+.dot3 {
+  width: 10px;
+  height: 10px;
+  background-color: #3498db;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.dot2 {
+  animation-delay: 0.2s;
+}
+
+.dot3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* .mike {
+  background-image: url("./images/felix.jpg");
+  background-size: cover;
+} */
+
+@media (max-width: 500px) {
+  body {
+    overflow: scroll;
+  }
+}

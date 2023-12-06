@@ -1,0 +1,5 @@
+.nav a:global(.active) {
+  color: #f99417;
+  border-width: 3px;
+  padding: 0 15px 0 15px;
+}
