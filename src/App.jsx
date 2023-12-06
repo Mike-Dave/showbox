@@ -1,5 +1,4 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-// import Homepage from "./pages/Homepage";
 import { MoviesProvider } from "./contexts/MoviesContext";
 import MovieItem from "./pages/MovieItem";
 import AppLayout from "./components/AppLayout";
@@ -21,7 +20,6 @@ import Documentary from "./pages/Documentary";
 import Drama from "./pages/Drama";
 import Family from "./pages/Family";
 import Popular from "./pages/Popular";
-import MyComponent from "./pages/Mycomponent";
 import History from "./pages/History";
 import Fantansy from "./pages/Fantasy";
 import Horror from "./pages/Horror";
@@ -47,7 +45,6 @@ function App() {
             <Route element={<AppLayout />}>
               <Route index element={<Navigate replace to="trending" />} />
               <Route path="trending" element={<Trending />} />
-              <Route path="learn" element={<MyComponent />} />
               <Route path="popular" element={<Popular />} />
               <Route path="all" element={<All />} />
               <Route path="action" element={<Action />} />
@@ -80,7 +77,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      </MoviesProvider>{" "}
+      </MoviesProvider>
     </QueryClientProvider>
   );
 }

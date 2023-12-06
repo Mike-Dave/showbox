@@ -21,7 +21,7 @@ export async function movieData(query, pageParam = 1) {
 
     // Parse the response as JSON
     const data = await response.json();
-    console.log(data);
+ 
     return data.results;
   } catch (error) {
     // Handle any errors that occurred during the fetch
