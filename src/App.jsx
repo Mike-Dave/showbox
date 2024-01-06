@@ -5,7 +5,6 @@ import AppLayout from "./components/AppLayout";
 import TvShows from "./pages/TvShows";
 import MyChoice from "./pages/MyChoices";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import MovieDetails from "./pages/MovieDetails";
 import Favorites from "./pages/Favorites";
 import Watchlist from "./pages/Watchlist";
@@ -38,7 +37,6 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools />
       <MoviesProvider>
         <BrowserRouter>
           <Routes>

@@ -5,14 +5,8 @@
 @tailwind utilities;
 
 body {
-  /* background-color: #2d2e37; */
   background-color: #1e1e2a;
-  /* overflow-y: hidden;
-    overflow: scroll; */
   min-height: 100vh;
-  /* overflow: scroll; */
-  /* overflow: hidden; */
-  /* overflow: scroll; */
 }
 body {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -29,7 +23,7 @@ body::-webkit-scrollbar {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 8px;
-  width: 300px; /* Adjust the width as needed */
+  width: 300px;
 }
 
 .search-icon {
@@ -37,7 +31,6 @@ body::-webkit-scrollbar {
 }
 
 .search-input {
-  /* flex: 1; */
   border: none;
   padding: 8px;
   outline: none;
@@ -49,11 +42,8 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-  /* display: no ne; */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
-  /* opacity: 0.8; */
-  /* filter: blur(10px); */
 }
 
 .loading-Position {
@@ -87,8 +77,6 @@ body::-webkit-scrollbar {
   display: flex;
   margin-top: 30px;
   margin-left: 15px;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .dot1,
@@ -115,11 +103,6 @@ body::-webkit-scrollbar {
     transform: translateY(-10px);
   }
 }
-
-/* .mike {
-  background-image: url("./images/felix.jpg");
-  background-size: cover;
-} */
 
 @media (max-width: 500px) {
   body {
